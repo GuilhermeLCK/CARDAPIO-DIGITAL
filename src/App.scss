@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+:root {  
+  --tw-text-opacity: 1
+  --cor-backgrond: #f4f5f7;
+  --title: 24px;
+  --titlecard: 16px;
+  --descricao: 14px;
+  --descricao-color: rgba(107,114,128,var(--tw-text-opacity));
+  --line-height: 1.25rem;
+}
+
+/* Estilizando a barra de rolagem */
+body::-webkit-scrollbar {
+  width: 5px; /* largura da barra de rolagem */
+}
+
+/* Estilizando o traço da barra de rolagem */
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* cor do traço */
+  border-radius: 5px; /* borda arredondada */
+}
+
+/* Estilizando a área da barra de rolagem */
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* cor de fundo da área da barra de rolagem */
+}
+
+
+body,
+html {
+  background-color: var(--cor-backgrond);
+
+}
