@@ -74,7 +74,7 @@
     max-height: 500px;
     @media (max-width: 768px) {
       flex: 1;
-      max-height: 400px;
+      min-height: 60%;
     }
 
     .card-modalCarinho-pedido-sacola {
@@ -260,7 +260,11 @@
     overflow: hidden;
     min-height: 300px;
     flex: 1;
-    max-height: 400px;
+    min-height: 200px;
+
+    @media (max-width: 768px) {
+      min-height: 60%;
+    }
 
     a {
       cursor: pointer;
