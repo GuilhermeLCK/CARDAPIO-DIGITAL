@@ -18,7 +18,6 @@
 
 .card-modalCarinho {
   z-index: 999;
-  overflow: hidden;
   width: 30%;
   --tw-bg-opacity: 1;
   border: 1px solid;
@@ -36,11 +35,12 @@
     width: 80%;
   }
   @media (max-width: 768px) {
-    position: fixed !important;
+    position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     border-radius: 0;
+    padding-block: 20px;
   }
 
   .card-modalCarinho-close {
@@ -75,6 +75,8 @@
     max-height: 500px;
     @media (max-width: 768px) {
       flex: 1;
+      max-height: 400px;
+      background-color: red;
     }
 
     .card-modalCarinho-pedido-sacola {
@@ -260,7 +262,8 @@
     overflow: hidden;
     min-height: 300px;
     flex: 1;
-
+    max-height: 400px;
+    background-color: red;
     a {
       cursor: pointer;
       padding: 10px;
