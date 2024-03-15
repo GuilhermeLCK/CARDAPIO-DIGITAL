@@ -187,12 +187,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 25px;
+        padding-top: 20px;
+
         h3 {
           padding-block: 10px;
           font-weight: 300;
           font-size: 13px;
           color: rgba(107, 114, 128, 1);
+
+          @media (max-width: 768px) {
+            padding-block: 0px;
+          }
         }
       }
     }
