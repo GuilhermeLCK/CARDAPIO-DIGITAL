@@ -91,6 +91,7 @@
       justify-content: space-between;
       padding-block: 20px;
       padding-inline: 10px;
+
       @media (max-width: 768px) {
         padding-block: 0px;
       }
@@ -141,7 +142,7 @@
       @media (max-width: 768px) {
         flex: 1;
         height: 100vw;
-        justify-content: space-between;
+        justify-content: space-around;
         box-shadow: none;
       }
 
@@ -150,12 +151,21 @@
         width: 100%;
         font-size: var(--titlecard);
         padding-block: 10px;
+
+        @media (max-width: 768px) {
+          background-color: red;
+          padding-block: 20px;
+        }
       }
       h2 {
         font-weight: 400;
         width: 100%;
         font-size: var(--titlecard);
         padding-block: 10px;
+        @media (max-width: 768px) {
+          background-color: red;
+          padding-block: 20px;
+        }
       }
 
       h3 {
@@ -165,6 +175,7 @@
         color: rgba(107, 114, 128, 1);
 
         @media (max-width: 768px) {
+          background-color: red;
           padding-block: 0px;
         }
       }
@@ -172,7 +183,7 @@
       textarea {
         resize: none;
         padding: 5px;
-        height: 100px;
+        height: 120px;
         width: 100%;
         border: 1px solid rgba(0, 0, 0, 0.089);
         border-radius: 4px;
@@ -194,10 +205,6 @@
           font-weight: 300;
           font-size: 13px;
           color: rgba(107, 114, 128, 1);
-
-          @media (max-width: 768px) {
-            padding-block: 0px;
-          }
         }
       }
     }
