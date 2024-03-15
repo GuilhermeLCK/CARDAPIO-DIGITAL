@@ -13,10 +13,13 @@
 
   @media (max-width: 1330px) {
     padding-inline: 0px;
+    background-color: rgb(255, 255, 255);
   }
 }
 
 .card-cardprodutos {
+  z-index: 999;
+  overflow: hidden;
   width: 50%;
   --tw-bg-opacity: 1;
   border: 1px solid;
