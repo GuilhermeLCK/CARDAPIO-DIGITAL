@@ -40,7 +40,7 @@
     height: 100%;
     top: 0;
     border-radius: 0;
-    padding-block: 20px;
+    padding-block: 10px;
   }
 
   .card-modalCarinho-close {
@@ -76,7 +76,6 @@
     @media (max-width: 768px) {
       flex: 1;
       max-height: 400px;
-      background-color: red;
     }
 
     .card-modalCarinho-pedido-sacola {
@@ -263,7 +262,7 @@
     min-height: 300px;
     flex: 1;
     max-height: 400px;
-    background-color: red;
+
     a {
       cursor: pointer;
       padding: 10px;
