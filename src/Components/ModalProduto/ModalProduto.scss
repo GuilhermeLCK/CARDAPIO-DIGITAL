@@ -163,14 +163,12 @@
         font-weight: 300;
         font-size: var(--descricao);
         color: rgba(107, 114, 128, 1);
+
+        @media (max-width: 768px) {
+          padding-block: 0px;
+        }
       }
 
-      p {
-        padding-block: 10px;
-        font-weight: 300;
-        font-size: var(--descricao);
-        color: rgba(107, 114, 128, 1);
-      }
       textarea {
         resize: none;
         padding: 5px;
