@@ -5,7 +5,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  overflow: hidden;
+
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -261,14 +261,14 @@
       padding-inline: 20px;
       border-radius: 8px;
       background-color: #dbdbdb;
-      color: #000;
+      color: #0000;
     }
   }
 }
 
 /* Estilo del scrollbar */
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 1px;
 }
 
 /* Estilo del thumb (la parte deslizante) */

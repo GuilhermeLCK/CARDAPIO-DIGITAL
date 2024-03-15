@@ -30,6 +30,7 @@ const Cardapio = () => {
   }
   function FecharModalProduto() {
     setAbrirModalProduto(false);
+    document.body.style.overflow = "";
   }
 
   function HandleAbrirModalCarrinho() {

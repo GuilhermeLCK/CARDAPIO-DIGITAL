@@ -102,11 +102,11 @@ function CardProdutos({
             <div className="card-cardprodutos-inf-add">
               <div className="card-cardprodutos-inf-add-cout">
                 <button onClick={handleCountDown}>
-                  <FaMinus size={14} />
+                  <FaMinus size={14} color="black" />
                 </button>
                 <p>{count}</p>
                 <button onClick={handleCountUp}>
-                  <FaPlus size={14} />
+                  <FaPlus size={14} color="black" />
                 </button>
               </div>
               <div

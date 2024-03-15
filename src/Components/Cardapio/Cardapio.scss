@@ -9,6 +9,7 @@
     cursor: pointer;
   }
   select {
+    color: #000;
     background-color: #f6f6f6;
     border: thin solid #00000017;
     border-radius: 4px;
@@ -133,7 +134,9 @@
   align-items: start;
   justify-content: center;
   flex-direction: column;
-
+  @media (max-width: 768px) {
+    padding-bottom: 80px;
+  }
   h1 {
     font-size: var(--title);
   }
