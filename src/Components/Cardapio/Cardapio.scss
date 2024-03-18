@@ -165,7 +165,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 140px;
+  height: 160px;
 
   gap: 10px;
 
@@ -213,14 +213,14 @@
 
 .produtos-cards-img {
   width: 40%;
-  height: 140px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   img {
     width: 100%;
-    height: 85%;
+    height: 100%;
     object-fit: contain;
   }
 }
