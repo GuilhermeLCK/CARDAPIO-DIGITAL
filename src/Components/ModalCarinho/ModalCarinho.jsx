@@ -5,10 +5,13 @@ import { toast } from "react-toastify";
 
 import "./ModalCarinho.scss";
 
-function ModalCarinho({ getCartFromLocalStorage, HandleFecharModalCarrinho }) {
+function ModalCarinho({
+  getCartFromLocalStorage,
+  HandleFecharModalCarrinho,
+  aberto,
+}) {
   const produtosLocal = getCartFromLocalStorage();
 
-  console.log(produtosLocal);
   const [produtosCarrinho, setProdutosCarrinho] = useState([...produtosLocal]);
   const [total, setTotal] = useState(0);
 
@@ -46,6 +49,15 @@ function ModalCarinho({ getCartFromLocalStorage, HandleFecharModalCarrinho }) {
     toast.success("Produto excluido!");
   }
 
+  function LimparProdutoDoCarinho(prodto) {
+    getCartFromLocalStorage();
+    setProdutosCarrinho("");
+    localStorage.setItem("cart", "");
+    HandleFecharModalCarrinho();
+    toast.success("Carrinho limpo!");
+  }
+
+  console.log(aberto);
   return (
     <>
       <div className="container-modalCarinho">
@@ -58,7 +70,8 @@ function ModalCarinho({ getCartFromLocalStorage, HandleFecharModalCarrinho }) {
           </div>
           <div className="card-modalCarinho-pedido">
             <div className="card-modalCarinho-pedido-sacola">
-              <h2>Sua sacola</h2> <button>LIMPAR</button>
+              <h2>Sua sacola</h2>{" "}
+              <button onClick={LimparProdutoDoCarinho}>LIMPAR</button>
             </div>
             {produtosCarrinho.length ? (
               produtosCarrinho.map((produto, index) => {
@@ -90,7 +103,7 @@ function ModalCarinho({ getCartFromLocalStorage, HandleFecharModalCarrinho }) {
                           currency: "BRL",
                         }).format(produto.preco)}
                       </p>
-                      <img src={Pizza} alt="Imagem do produto" />
+                      <img src={produto.img} alt="Imagem do produto" />
                     </div>
                   </div>
                 );
@@ -128,11 +141,11 @@ function ModalCarinho({ getCartFromLocalStorage, HandleFecharModalCarrinho }) {
           </div>
           <button
             className={`btn-fecharPedido ${
-              produtosCarrinho.length ? "" : "disabled"
+              produtosCarrinho.length === 0 || !aberto ? "disabled" : ""
             }`}
-            disabled={!produtosCarrinho.length}
+            disabled={produtosCarrinho.length === 0 || !aberto}
           >
-            FECHAR PEDIDO
+            {aberto ? "FECHAR PEDIDO" : "ESTABELECIMENTO FECHADO"}
           </button>
         </div>
       </div>

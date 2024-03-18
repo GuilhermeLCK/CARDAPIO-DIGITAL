@@ -7,7 +7,7 @@ import ButtonCart from "../ButtonCart/ButtonCart";
 import ModalCarinho from "../ModalCarinho/ModalCarinho";
 
 import "./Cardapio.scss";
-const Cardapio = () => {
+const Cardapio = ({ aberto }) => {
   const { categorias, produtos } = data;
   const [categoriaSelecionada, setCategoriaSelecionada] = useState([]);
   const [produtoModal, setProdutoModal] = useState([]);
@@ -54,6 +54,7 @@ const Cardapio = () => {
       )}
       {abrirModalCarinho && (
         <ModalCarinho
+          aberto={aberto}
           HandleFecharModalCarrinho={HandleFecharModalCarrinho}
           getCartFromLocalStorage={getCartFromLocalStorage}
         />
@@ -112,7 +113,7 @@ const Cardapio = () => {
         </div>
       ) : (
         <div className="container-produtos">
-          <h1>{produtosDaCategoria[0].categoria}</h1>
+          <h1>{categoriaSelecionada}</h1>
 
           <div className="container-produtos-cards">
             {produtosDaCategoria.map((produto) => (
@@ -134,7 +135,7 @@ const Cardapio = () => {
                   </span>
                 </div>
                 <div className="produtos-cards-img">
-                  <img src={Pizza} alt="Pizza" />
+                  <img src={produto.img} alt="Img do produto" />
                 </div>
               </div>
             ))}

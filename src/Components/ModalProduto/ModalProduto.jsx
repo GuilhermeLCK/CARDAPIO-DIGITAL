@@ -61,12 +61,7 @@ function CardProdutos({
       <div className="container-cardprodutos">
         <div className="card-cardprodutos">
           <div className="card-cardprodutos-img">
-            <img
-              src={
-                "https://mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saudável-que-nada-brasileiro-gosta-de-fast-food.jpg"
-              }
-              alt="Pizza"
-            />
+            <img src={produtoModal.img} alt="Img do produto" />
           </div>
           <div className="card-cardprodutos-inf">
             <div className="card-cardprodutos-inf-detalhes">

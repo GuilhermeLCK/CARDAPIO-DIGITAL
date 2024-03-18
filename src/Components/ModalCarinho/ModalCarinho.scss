@@ -12,6 +12,9 @@
   padding-inline: 15px;
 
   @media (max-width: 1330px) {
+    padding-inline: 10px;
+  }
+  @media (max-width: 768px) {
     padding-inline: 0px;
   }
 }
@@ -32,7 +35,7 @@
   padding: 15px;
 
   @media (max-width: 1330px) {
-    width: 80%;
+    width: 60%;
   }
   @media (max-width: 768px) {
     position: fixed;
@@ -41,251 +44,269 @@
     top: 0;
     border-radius: 0;
   }
+}
 
-  .card-modalCarinho-close {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 10px;
+.card-modalCarinho-pedido {
+  width: 100%;
+  overflow: auto;
+  max-height: 500px;
+  @media (max-width: 768px) {
+    flex: 1;
+    min-height: 60%;
+  }
+}
 
-    h1 {
-      font-size: 18px;
-      font-weight: 500;
-      width: 70%;
-    }
-    button {
-      border-radius: 50%;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      padding: 5px;
-      color: #000000;
+.card-modalCarinho-pedido-sacola {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    width: 70%;
+  }
+
+  button {
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    border-radius: 5px;
+    transition: 0.6s;
+    padding-inline: 10px;
+    padding-block: 5px;
+    text-align: center;
+
+    &:hover {
+      transition: 0.6s;
       background-color: rgb(223, 223, 223);
     }
   }
+}
+.card-modalCarinho-pedido-produtos {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  height: 150px;
+  padding-block: 10px;
+  padding-inline: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-color: rgba(0, 0, 0, 0.089);
 
-  .card-modalCarinho-pedido {
-    width: 100%;
-    overflow: auto;
-    max-height: 500px;
-    @media (max-width: 768px) {
-      flex: 1;
-      min-height: 60%;
-    }
-
-    .card-modalCarinho-pedido-sacola {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-block: 10px;
-
-      h2 {
-        font-size: 16px;
-        font-weight: 500;
-        width: 70%;
-      }
-
-      button {
-        font-size: 12px;
-        font-weight: 400;
-        border: none;
-        outline: none;
-        background-color: transparent;
-
-        border-radius: 5px;
-        transition: 0.6s;
-        padding-inline: 10px;
-        padding-block: 5px;
-        text-align: center;
-
-        &:hover {
-          transition: 0.6s;
-          background-color: rgb(223, 223, 223);
-        }
-      }
-    }
-
-    .card-modalCarinho-pedido-produtos {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      min-height: 80px;
-      padding-block: 10px;
-      padding-inline: 10px;
-      margin: 8px 0;
-      border-radius: 10px;
-      border: 1px solid;
-      background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-      border-color: rgba(0, 0, 0, 0.089);
-      &:hover {
-        cursor: pointer;
-        --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-          0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
-        box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
-          var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
-      }
-
-      .card-modalCarinho-pedido-inf {
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: start;
-        min-height: 80px;
-        gap: 10px;
-
-        P {
-          font-size: 16px;
-          font-weight: 500;
-          width: 70%;
-
-          .span-inf {
-            width: 100%;
-            font-weight: 400;
-            color: #000;
-          }
-        }
-
-        span {
-          font-weight: 300;
-          font-size: var(--descricao);
-          color: rgba(107, 114, 128, 1);
-        }
-
-        button {
-          border: none;
-          background-color: transparent;
-          font-weight: 400;
-          font-size: var(--descricao);
-          color: rgb(102, 102, 102);
-
-          &:hover {
-            color: rgb(0, 0, 0);
-          }
-        }
-      }
-
-      .card-modalCarinho-pedido-precos {
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: end;
-        min-height: 80px;
-        gap: 5px;
-        p {
-          font-size: 14px;
-          font-weight: 500;
-        }
-
-        img {
-          width: 75%;
-          border-radius: 10px;
-        }
-      }
-    }
-  }
-  .card-modalCarinho-subtotal {
-    width: 100%;
-    padding-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    P {
-      color: rgba(107, 114, 128, 1);
-      font-size: 14px;
-      font-family: 300;
-    }
-  }
-  .card-modalCarinho-entrega {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 3px;
-    P {
-      color: rgba(107, 114, 128, 1);
-      font-size: 14px;
-      font-family: 300;
-    }
+  @media (max-width: 550px) {
+    height: 95px;
   }
 
-  .card-modalCarinho-total {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 3px;
+  &:hover {
+    cursor: pointer;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 transparent, 0 0 transparent, var(--tw-shadow);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+      var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+  }
+}
+.card-modalCarinho-pedido-inf {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 130px;
+  gap: 10px;
 
-    h2 {
-      font-size: 16px;
-      font-family: 600;
-    }
+  @media (max-width: 550px) {
+    height: 70px;
   }
 
-  .btn-fecharPedido {
-    margin-top: 15px;
-    border-radius: 8px;
-    border: none;
-    width: 100%;
-    padding: 15px;
-    background-color: #0e0e0e;
-    color: #ffff;
+  P {
     font-size: 16px;
-    font-weight: 400;
-  }
+    font-weight: 500;
+    width: 70%;
 
-  .btn-fecharPedido.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  .FaCartShopping {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: 400;
-    gap: 10px;
-    overflow: hidden;
-    min-height: 300px;
-    flex: 1;
-    min-height: 200px;
-
-    @media (max-width: 768px) {
-      min-height: 60%;
+    .span-inf {
+      width: 100%;
+      font-weight: 400;
+      color: #000;
     }
+  }
 
-    a {
-      cursor: pointer;
-      padding: 10px;
-      padding-inline: 20px;
-      font-weight: 300;
-      border-radius: 8px;
-      background-color: #dbdbdb;
-      color: #000000;
+  span {
+    font-weight: 300;
+    font-size: var(--descricao);
+    color: rgba(107, 114, 128, 1);
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: var(--descricao);
+    color: rgb(102, 102, 102);
+
+    &:hover {
+      color: rgb(0, 0, 0);
+    }
+  }
+}
+.card-modalCarinho-subtotal {
+  width: 100%;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  P {
+    color: rgba(107, 114, 128, 1);
+    font-size: 14px;
+    font-family: 300;
+  }
+}
+.card-modalCarinho-entrega {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 3px;
+  P {
+    color: rgba(107, 114, 128, 1);
+    font-size: 14px;
+    font-family: 300;
+  }
+}
+
+.card-modalCarinho-total {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 3px;
+
+  h2 {
+    font-size: 16px;
+    font-family: 600;
+  }
+}
+
+.card-modalCarinho-pedido-precos {
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 130px;
+  gap: 5px;
+  @media (max-width: 550px) {
+    height: 70px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  img {
+    width: 85px;
+    height: 60%;
+    border-radius: 15px;
+    object-fit: cover;
+
+    @media (max-width: 550px) {
+      width: 55px;
+      height: 55%;
+      object-fit: contain;
     }
   }
 }
 
+.card-modalCarinho-close {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 70%;
+  }
+  button {
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: #000000;
+    background-color: rgb(223, 223, 223);
+  }
+}
+.FaCartShopping {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  gap: 10px;
+  overflow: hidden;
+  min-height: 300px;
+  flex: 1;
+  min-height: 200px;
+
+  @media (max-width: 768px) {
+    min-height: 60%;
+  }
+
+  a {
+    cursor: pointer;
+    padding: 10px;
+    padding-inline: 20px;
+    font-weight: 300;
+    border-radius: 8px;
+    background-color: #dbdbdb;
+    color: #000000;
+  }
+}
+.btn-fecharPedido {
+  margin-top: 15px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  background-color: #0e0e0e;
+  color: #ffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-fecharPedido.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 /* Estilo del scrollbar */
 ::-webkit-scrollbar {
   width: 1px;
+  opacity: 0;
 }
 
 /* Estilo del thumb (la parte deslizante) */
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color del thumb */
+  background-color: #88888800; /* Color del thumb */
   border-radius: 5px; /* Bordes redondeados del thumb */
 }
 

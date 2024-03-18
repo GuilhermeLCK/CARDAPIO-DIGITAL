@@ -1,3 +1,26 @@
+import ColaCola from "./assets/Cocacola.webp";
+import Agua from "./assets/Agua mineral.jpg";
+import Suco from "./assets/Sucodelaranja.jpg";
+import Cafe from "./assets/Cafe.png";
+import Energetico from "./assets/Energetico.png";
+import Pastel from "./assets/Pastel.webp";
+import Coxinha from "./assets/Coxinha.jpg";
+import Pao from "./assets/Pao de queijo.jpg";
+import Torta from "./assets/Torta.jpg";
+import CHEESECAKE from "./assets/CHEESECAKE.jpg";
+import Mouse from "./assets/Mouse.jpg";
+import BROWNIE from "./assets/BROWNIE.jpg";
+import PUDIM from "./assets/PUDIM.jpg";
+import Batata from "./assets/Batata.png";
+
+import Sanduiche1 from "./assets/hamb-1.svg";
+import Sanduiche2 from "./assets/hamb-2.svg";
+import Sanduiche3 from "./assets/hamb-3.svg";
+import Sanduiche4 from "./assets/hamb-4.svg";
+import Sanduiche5 from "./assets/hamb-5.svg";
+import Sanduiche6 from "./assets/hamb-6.svg";
+import Sanduiche7 from "./assets/hamb-7.svg";
+import Sanduiche8 from "./assets/hamb-8.svg";
 const categorias = [
   {
     nome: "SALGADOS",
@@ -16,18 +39,17 @@ const categorias = [
   },
   {
     nome: "SANDUICHES",
-    banner:
-      "https://storage.googleapis.com/prod-cardapio-web/uploads/category/image/66284/cfed1de5100882531_550495578826829_6925283926101458944_o.jpg",
+    banner: Sanduiche1,
   },
 ];
 const produtos = [
-  // Produtos para a categoria "BEBIDAS"
   {
     id: 1,
     nome: "Coca Cola",
     categoria: "BEBIDAS",
     preco: 5,
     descricao: "Refrigerante de cola.",
+    img: ColaCola,
   },
   {
     id: 2,
@@ -35,6 +57,7 @@ const produtos = [
     categoria: "BEBIDAS",
     preco: 2,
     descricao: "",
+    img: Agua,
   },
   {
     id: 3,
@@ -42,6 +65,7 @@ const produtos = [
     categoria: "BEBIDAS",
     preco: 4,
     descricao: "Suco natural de laranja.",
+    img: Suco,
   },
   {
     id: 4,
@@ -49,57 +73,25 @@ const produtos = [
     categoria: "BEBIDAS",
     preco: 3,
     descricao: "Café expresso encorpado.",
+    img: Cafe,
   },
-  {
-    id: 5,
-    nome: "CHÁ DE CAMOMILA",
-    categoria: "BEBIDAS",
-    preco: 3,
-    descricao: "Chá calmante de camomila.",
-  },
-  {
-    id: 6,
-    nome: "REFRIGERANTE DE LIMÃO",
-    categoria: "BEBIDAS",
-    preco: 5,
-    descricao: "Refrigerante de limão refrescante.",
-  },
+
   {
     id: 7,
     nome: "H2O ENERGÉTICO",
     categoria: "BEBIDAS",
     preco: 6,
     descricao: "Bebida energética com sabor de frutas.",
-  },
-  {
-    id: 8,
-    nome: "VODKA ABSOLUT",
-    categoria: "BEBIDAS",
-    preco: 39,
-    descricao: "Vodka premium sueca.",
-  },
-  {
-    id: 9,
-    nome: "WHISKY JACK DANIEL'S",
-    categoria: "BEBIDAS",
-    preco: 49,
-    descricao: "Whisky bourbon americano.",
-  },
-  {
-    id: 10,
-    nome: "VINHO TINTO MERLOT",
-    categoria: "BEBIDAS",
-    preco: 29,
-    descricao: "Vinho tinto frutado com notas de cereja.",
+    img: Energetico,
   },
 
-  // Produtos para a categoria "SALGADOS"
   {
     id: 11,
     nome: "PASTEL DE CARNE",
     categoria: "SALGADOS",
     preco: 3,
     descricao: "Pastel recheado com carne moída.",
+    img: Pastel,
   },
   {
     id: 12,
@@ -107,20 +99,16 @@ const produtos = [
     categoria: "SALGADOS",
     preco: 2,
     descricao: "Salgado frito com recheio de frango.",
+    img: Coxinha,
   },
-  {
-    id: 13,
-    nome: "EMPADA DE PALMITO",
-    categoria: "SALGADOS",
-    preco: 3,
-    descricao: "Empada com recheio de palmito.",
-  },
+
   {
     id: 14,
     nome: "PÃO DE QUEIJO",
     categoria: "SALGADOS",
     preco: 1,
     descricao: "Pão de queijo tradicional mineiro.",
+    img: Pao,
   },
   {
     id: 15,
@@ -128,6 +116,7 @@ const produtos = [
     categoria: "SALGADOS",
     preco: 4,
     descricao: "Torta salgada recheada com frango desfiado.",
+    img: Torta,
   },
   {
     id: 16,
@@ -135,50 +124,16 @@ const produtos = [
     categoria: "SALGADOS",
     preco: 6,
     descricao: "Porção de batata frita crocante.",
-  },
-  {
-    id: 17,
-    nome: "ESFIHA DE CARNE",
-    categoria: "SALGADOS",
-    preco: 2,
-    descricao: "Esfiha aberta com recheio de carne temperada.",
-  },
-  {
-    id: 18,
-    nome: "PASTEL DE QUEIJO",
-    categoria: "SALGADOS",
-    preco: 3,
-    descricao: "Pastel recheado com queijo cremoso.",
-  },
-  {
-    id: 19,
-    nome: "COXINHA DE CAMARÃO",
-    categoria: "SALGADOS",
-    preco: 4,
-    descricao: "Coxinha de camarão com massa crocante.",
-  },
-  {
-    id: 20,
-    nome: "CROISSANT DE PRESUNTO E QUEIJO",
-    categoria: "SALGADOS",
-    preco: 3,
-    descricao: "Croissant recheado com presunto e queijo.",
+    img: Batata,
   },
 
-  // Produtos para a categoria "SOBREMESAS"
-  {
-    id: 21,
-    nome: "SORVETE DE CHOCOLATE",
-    categoria: "SOBREMESAS",
-    preco: 7,
-    descricao: "Sorvete de chocolate cremoso.",
-  },
   {
     id: 22,
     nome: "CHEESECAKE DE MORANGO",
     categoria: "SOBREMESAS",
     preco: 9,
     descricao: "Cheesecake cremoso com cobertura de morango.",
+    img: CHEESECAKE,
   },
   {
     id: 23,
@@ -186,20 +141,16 @@ const produtos = [
     categoria: "SOBREMESAS",
     preco: 6,
     descricao: "Mousse refrescante de limão.",
+    img: Mouse,
   },
-  {
-    id: 24,
-    nome: "TORTA DE MAÇÃ",
-    categoria: "SOBREMESAS",
-    preco: 8,
-    descricao: "Torta de maçã com canela.",
-  },
+
   {
     id: 25,
     nome: "BROWNIE DE CHOCOLATE",
     categoria: "SOBREMESAS",
     preco: 5,
     descricao: "Brownie de chocolate com nozes.",
+    img: BROWNIE,
   },
   {
     id: 26,
@@ -207,34 +158,7 @@ const produtos = [
     categoria: "SOBREMESAS",
     preco: 4,
     descricao: "Pudim cremoso de leite condensado.",
-  },
-  {
-    id: 27,
-    nome: "TORTA DE LIMÃO",
-    categoria: "SOBREMESAS",
-    preco: 6,
-    descricao: "Torta de limão com merengue.",
-  },
-  {
-    id: 28,
-    nome: "CREME BRÛLÉE",
-    categoria: "SOBREMESAS",
-    preco: 10,
-    descricao: "Creme custard com cobertura de açúcar caramelizado.",
-  },
-  {
-    id: 29,
-    nome: "BANANA SPLIT",
-    categoria: "SOBREMESAS",
-    preco: 8,
-    descricao: "Sobremesa gelada com banana, sorvete e calda de chocolate.",
-  },
-  {
-    id: 30,
-    nome: "TIRAMISÙ",
-    categoria: "SOBREMESAS",
-    preco: 9,
-    descricao: "Sobremesa italiana com camadas de café e mascarpone.",
+    img: PUDIM,
   },
 
   // Produtos para a categoria "SANDUICHES"
@@ -244,6 +168,7 @@ const produtos = [
     categoria: "SANDUICHES",
     preco: 8,
     descricao: "Sanduíche de frango grelhado com alface e tomate.",
+    img: Sanduiche1,
   },
   {
     id: 32,
@@ -251,6 +176,7 @@ const produtos = [
     categoria: "SANDUICHES",
     preco: 7,
     descricao: "Sanduíche clássico com presunto e queijo.",
+    img: Sanduiche2,
   },
   {
     id: 33,
@@ -258,6 +184,7 @@ const produtos = [
     categoria: "SANDUICHES",
     preco: 9,
     descricao: "Sanduíche de atum com maionese e alface.",
+    img: Sanduiche3,
   },
   {
     id: 34,
@@ -266,13 +193,16 @@ const produtos = [
     preco: 10,
     descricao:
       "Sanduíche de rosbife com mostarda dijon e cebolas caramelizadas.",
+    img: Sanduiche4,
   },
   {
     id: 35,
     nome: "SANDUÍCHE VEGANO",
     categoria: "SANDUICHES",
     preco: 8,
+
     descricao: "Sanduíche vegano com hambúrguer de quinoa e legumes grelhados.",
+    img: Sanduiche5,
   },
   {
     id: 36,
@@ -280,6 +210,7 @@ const produtos = [
     categoria: "SANDUICHES",
     preco: 6,
     descricao: "Sanduíche tradicional com queijo e presunto grelhados.",
+    img: Sanduiche6,
   },
   {
     id: 37,
@@ -287,6 +218,7 @@ const produtos = [
     categoria: "SANDUICHES",
     preco: 7,
     descricao: "Sanduíche com peito de peru defumado, queijo suíço e maionese.",
+    img: Sanduiche7,
   },
   {
     id: 38,
@@ -294,24 +226,8 @@ const produtos = [
     categoria: "SANDUICHES",
     preco: 11,
     descricao: "Sanduíche triplo com frango grelhado, bacon, alface e tomate.",
-  },
-  {
-    id: 39,
-    nome: "SANDUÍCHE DE BIFE",
-    categoria: "SANDUICHES",
-    preco: 12,
-    descricao:
-      "Sanduíche de bife de filé mignon com queijo cheddar e cogumelos.",
-  },
-  {
-    id: 40,
-    nome: "SANDUÍCHE DE PEITO DE FRANGO GRELHADO",
-    categoria: "SANDUICHES",
-    preco: 9,
-    descricao: "Sanduíche de peito de frango grelhado com abacate e rúcula.",
+    img: Sanduiche8,
   },
 ];
-
-console.log(produtos);
 
 export default { categorias, produtos };
