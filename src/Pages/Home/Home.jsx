@@ -13,7 +13,7 @@ function Home() {
   const horaDate = parseInt(horaFormatada);
 
   let horaDeAbrir = 12;
-  let horaDeEncerrar = 23;
+  let horaDeEncerrar = 21;
 
   useEffect(() => {
     if (horaDate >= horaDeAbrir && horaDate <= horaDeEncerrar) {
